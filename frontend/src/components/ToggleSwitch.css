@@ -1,0 +1,74 @@
+.toggle-container {
+    width: 400px;
+    height: 220px;
+    padding: 0 40px;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1.5px solid rgba(255, 255, 255, 0.28);
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    font-family: Georgia, serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.toggle-container p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #122078;
+    margin: 0 0 24px 0;
+}
+
+.toggle-switch {
+    margin: 20px auto;
+    position: relative;
+    width: 350px;
+    height: 70px;
+    background: linear-gradient(to right, #4568dc, #283e51);
+    border-radius: 35px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.toggle-circle {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    transition: left 0.3s ease;
+    z-index: 2;
+}
+
+.toggle-switch.active .toggle-circle {
+    left: 285px;
+}
+
+.option {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.option.no {
+    left: 0;
+}
+
+.option.yes {
+    right: 0;
+} 
