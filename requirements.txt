@@ -4,5 +4,4 @@ numpy
 scipy
 librosa
 scikit-learn
-tensorflow-cpu
 gunicorn
