@@ -9,6 +9,19 @@
       }
     }
   ],
+  "build": {
+    "env": {
+      "PIP_REQUIREMENTS_FILE": "requirements.txt"
+    },
+    "steps": [
+      {
+        "run": "pip3 install --upgrade pip setuptools"
+      },
+      {
+        "run": "pip3 install -r $PIP_REQUIREMENTS_FILE"
+      }
+    ]
+  },
   "routes": [
     {
       "src": "/(.*)",
