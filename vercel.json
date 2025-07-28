@@ -1,31 +1,15 @@
 {
+{
   "builds": [
     {
-      "src": "app.py",
-      "use": "@vercel/python",
-      "config": {
-        "maxLambdaSize": "50mb",
-        "runtime": "python3.9"
-      }
+      "src": "wsgi.py",
+      "use": "@vercel/python"
     }
   ],
-  "build": {
-    "env": {
-      "PIP_REQUIREMENTS_FILE": "requirements.txt"
-    },
-    "steps": [
-      {
-        "run": "pip3 install --upgrade pip setuptools"
-      },
-      {
-        "run": "pip3 install -r $PIP_REQUIREMENTS_FILE"
-      }
-    ]
-  },
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "app.py"
+      "dest": "wsgi.py"
     }
   ]
 }
