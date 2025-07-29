@@ -5,4 +5,5 @@ scipy
 librosa
 scikit-learn
 gunicorn
-pip
+setuptools
+wheel
