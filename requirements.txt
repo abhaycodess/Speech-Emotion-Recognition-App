@@ -1,3 +1,5 @@
+setuptools>=65.5.1
+wheel
 flask==2.3.3
 flask-cors==4.0.0
 flask-sqlalchemy==3.1.1
@@ -15,5 +17,3 @@ google-auth-oauthlib>=0.4.1,<0.5
 requests==2.31.0
 tensorflow==2.10.0
 keras==2.10.0
-setuptools>=65.5.1
-wheel
