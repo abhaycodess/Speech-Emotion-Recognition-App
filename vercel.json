@@ -1,6 +1,11 @@
 {
   "builds": [
     {
+      "src": "packages.txt",
+      "use": "@vercel/build-env",
+      "config": { "install": "apt-get" }
+    },
+    {
       "src": "app.py",
       "use": "@vercel/python",
       "config": {
